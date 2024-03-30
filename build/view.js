@@ -1,0 +1,1 @@
+console.log("Hello World! (from create-block-gutenberg-features-playground-from-documentation block)");
