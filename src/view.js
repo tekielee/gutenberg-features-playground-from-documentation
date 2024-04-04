@@ -19,6 +19,28 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
+import { Button } from '@wordpress/components';
+
+/**
+ * React hook that is used to mark the block wrapper element.
+ * It provides all the necessary props like the class name.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
+ */
+import { useBlockProps } from '@wordpress/block-editor';
+
+export default function view () {
+
+	const MyButton = () => <Button variant="secondary">Click me!</Button>;
+
+	return (
+		<p { ...useBlockProps() }>
+			<MyButton />
+		</p>
+
+	);
+
+}
 
 /* eslint-disable no-console */
 console.log(
